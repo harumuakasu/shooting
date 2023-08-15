@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
 
 public class enemyContller : MonoBehaviour
 {
      float fallSpeed;
      float rotSpeed;
-     
+
+     //[SerializeField] private UIContller Contller;
      
     void Start()
     {
@@ -23,7 +25,7 @@ public class enemyContller : MonoBehaviour
 
         if (transform.position.y < -5.5f)
         {
-            GameObject.Find("Canvas").GetComponent<UIContller> ().GameOver();
+            //Contller.GameOver();
             Destroy(gameObject);
         }
     }

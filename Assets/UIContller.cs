@@ -1,12 +1,13 @@
 using System.Collections;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class UIContller : MonoBehaviour
 {
     private int score = 0;
-     GameObject scoreText;
-     GameObject gameOverText;
+    [SerializeField]TextMeshProUGUI scoreText;
+    [SerializeField]TextMeshProUGUI gameOverText;
 
 
      public void AddScore()
@@ -15,19 +16,12 @@ public class UIContller : MonoBehaviour
      }
      public void GameOver()
      {
-         this.gameOverText.GetComponent<Text>().text = "GameOver";
+         this.gameOverText.text = "GameOver";
      }
-    
-    
-    void Start()
-    {
-        this.scoreText = GameObject.Find("Score");
-        this.gameOverText = GameObject.Find("GameOver");
-    }
 
     // Update is called once per frame
     void Update()
     {
-        scoreText.GetComponent<Text>().text = "Scor:" + score.ToString("D4");
+        scoreText.text =  "Score:" + score.ToString("D4");
     }
 }

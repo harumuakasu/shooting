@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //[SerializeField] private UIContller Contller;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(coll.gameObject);
         Destroy((gameObject));
+        //Contller.AddScore();
     }
 }
