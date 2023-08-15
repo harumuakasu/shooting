@@ -5,10 +5,24 @@ using UnityEngine;
 
 public class UIContller : MonoBehaviour
 {
+
+    public static UIContller Instance;
     private int score = 0;
     [SerializeField]TextMeshProUGUI scoreText;
     [SerializeField]TextMeshProUGUI gameOverText;
-
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
      public void AddScore()
      {
@@ -16,7 +30,8 @@ public class UIContller : MonoBehaviour
      }
      public void GameOver()
      {
-         this.gameOverText.text = "GameOver";
+         gameOverText.text = "GameOver";
+         Debug.Log("GameOver");
      }
 
     // Update is called once per frame

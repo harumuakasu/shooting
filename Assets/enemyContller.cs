@@ -25,8 +25,9 @@ public class enemyContller : MonoBehaviour
 
         if (transform.position.y < -5.5f)
         {
-            //Contller.GameOver();
-            Destroy(gameObject);
+            
+            //UIContller.Instance().GameOver();
+            //Destroy(gameObject);
         }
     }
 }
