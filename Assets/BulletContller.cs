@@ -9,13 +9,7 @@ public class Bullet : MonoBehaviour
     
     //[SerializeField] private UIContller Contller;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         transform.Translate(0,0.1f,0);
@@ -31,5 +25,6 @@ public class Bullet : MonoBehaviour
         Destroy(coll.gameObject);
         Destroy((gameObject));
          UIContller.Instance.AddScore();
+         
     }
 }

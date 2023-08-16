@@ -28,7 +28,7 @@ public class enemyContller : MonoBehaviour
         {
             
             UIContller.Instance.GameOver();
-            SceneManager.LoadScene("resultGameScene");
+            //SceneManager.LoadScene("resultGameScene");
             Destroy(gameObject);
         }
     }
