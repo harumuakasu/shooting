@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemyContller : MonoBehaviour
 {
@@ -26,8 +27,9 @@ public class enemyContller : MonoBehaviour
         if (transform.position.y < -5.5f)
         {
             
-            //UIContller.Instance().GameOver();
-            //Destroy(gameObject);
+            UIContller.Instance.GameOver();
+            SceneManager.LoadScene("resultGameScene");
+            Destroy(gameObject);
         }
     }
 }

@@ -30,6 +30,6 @@ public class Bullet : MonoBehaviour
     {
         Destroy(coll.gameObject);
         Destroy((gameObject));
-        // UIContller.Instance().AddScore();
+         UIContller.Instance.AddScore();
     }
 }
