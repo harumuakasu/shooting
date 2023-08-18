@@ -9,7 +9,7 @@ public class UIContller : MonoBehaviour
     public static UIContller Instance;
     private int score = 0;
     //[SerializeField]TextMeshProUGUI scoreText;
-    [SerializeField]TextMeshProUGUI gameOverText;
+    [SerializeField]CanvasGroup gameOverText;
     
     private void Awake()
     {
@@ -37,9 +37,9 @@ public class UIContller : MonoBehaviour
      
      public void GameOver()
      {
-         Instantiate(gameOverText);
+         gameOverText.alpha = 1;
          Debug.Log("GameOver");
      }
-
+    
     // Update is called once per frame
 }

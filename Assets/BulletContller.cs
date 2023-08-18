@@ -7,11 +7,10 @@ public class Bullet : MonoBehaviour
 {
     private UIContller _uiContller;
     
-    //[SerializeField] private UIContller Contller;
-    
     
     void Update()
     {
+        //打った球を消す
         transform.Translate(0,0.1f,0);
 
         if (transform.position.y > 5)
@@ -20,11 +19,5 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
-    {
-        Destroy(coll.gameObject);
-        Destroy((gameObject));
-         UIContller.Instance.AddScore();
-         
-    }
+    
 }
